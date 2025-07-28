@@ -3,7 +3,8 @@ import { useCallback, useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import Dock from "../components/Dock";
 import AddUserModal from "../components/AddUserModal";
-export const API_URL = "http://localhost:5000/api/users";
+export const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:3000/api/users";
 
 type User = {
   _id: string;
